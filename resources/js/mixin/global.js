@@ -1,7 +1,7 @@
 export const global = {
     methods: {
         redirect(locale) {
-            window.location = this.replaceUrlParam(this.field.url + '/resources/' + this.resourceName + "/" + this.field.value.id + "/edit", 'lang', locale);
+            window.location = this.replaceUrlParam(window.location.origin + '/resources/' + this.resourceName + "/" + this.field.value.id + "/edit", 'lang', locale);
         },
 
         replaceUrlParam(url, paramName, paramValue) {
